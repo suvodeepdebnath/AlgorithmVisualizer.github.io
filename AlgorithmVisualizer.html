@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+ <HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name = "viewport" content = "width=device-eidth, initial scale = 1.0">
+    <link rel = "stylesheet" href = "AlgorithmVisualizer.css">
+    <title>Algorithm Visualizer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons_contrainer">
+            <button id="random_array_button">Generate Random Array</button>
+            <div class="space"></div>
+            <button id="sort_button">Sort</button>
+            <div class="space"></div>
+            <input type="range" id = "slider" min = "1" max = "100" step = "1" value = "50"/>
+            <div class="space"></div>
+            <select name ="" id = "speed">
+                <option value="200">Slow</option>
+                <option value="50">Medium</option>
+                <option value="10">Fast</option>
+            </select>
+            <div class="space"></div>
+            <select name="" id = "algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="heap">Heap Sort</option>
+            </select>
+        </div>
+        <div class="bars_container" id = "bars_container">
+
+        </div>
+    </div>
+
+    <script src = "AlgorithmVisualizer.js"></script>
+</body>
+
+ </HTML>
