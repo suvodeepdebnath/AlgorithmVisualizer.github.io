@@ -132,11 +132,13 @@ async function bubbleSort(arr){
             var temp = arr[j];
             arr[j] = arr[j + 1];
             arr[j + 1] = temp;
-
+            
             bars[j].style.height = arr[j] * height_factor + "px";
             bars[j].style.backgroundColor = "lightblue";
+            bars[j].innerHTML = arr[j];
             bars[j + 1].style.height = arr[j + 1] * height_factor + "px";
             bars[j + 1].style.backgroundColor = "orange";
+            bars[j + 1].innerHTML = arr[j + 1];
             await sleep(visualization_speed);
         }
       }
@@ -170,9 +172,11 @@ async function selectionSort(arr)
         arr[i] = temp;
 
         bars[min_idx].style.backgroundColor = "yellow";
+        bars[min_idx].innerHTML = arr[min_idx];
         await sleep(visualization_speed / 2);
         bars[i].style.height = arr[i] * height_factor + "px";
         bars[i].style.backgroundColor = "green";
+        bars[i].innerHTML = arr[i];
         
         if(min_idx != i){
             bars[min_idx].style.height = arr[min_idx] * height_factor + "px";
